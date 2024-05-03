@@ -3,6 +3,7 @@ package Student;
 import java.util.ArrayList;
 
 public class Student {
+    //parametry klasy
     final int id;
     String name;
     String surname;
@@ -12,20 +13,22 @@ public class Student {
     ArrayList<String> przedmioty = new ArrayList<>();
     ArrayList<Float> oceny = new ArrayList<>();
 
+    //konstruktor 1
     public Student(int id, String name, String surname, int phoneNumber) {
         this.id = id;
         this.name = name;
         this.surname = surname;
         this.phoneNumber = phoneNumber;
     }
-
+    //konstruktor 2
     public Student(int id, String name, String surname, String email) {
         this.id = id;
         this.name = name;
         this.surname = surname;
         this.email = email;
     }
-    public void przepuscStudenta(){
+    //metody
+    public void przepuscStudenta() {
         this.czyZdane=true;
         System.out.println("Włąśnie zdałeś :)");
     }
@@ -39,4 +42,15 @@ public class Student {
     public void dodajOcene(float ocena) {
         this.oceny.add(ocena);
     }
+    public float wyliczSredniaOcen() {
+        int iloscOcen = oceny.toArray().length;
+        float sumaOcen = 0;
+        for (Float ocena : oceny) {
+            sumaOcen += ocena;
+        }
+        float sredniaOcen = sumaOcen / iloscOcen;
+        return sredniaOcen;
+
+    }
+
 }
