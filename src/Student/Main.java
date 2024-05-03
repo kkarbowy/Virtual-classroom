@@ -33,8 +33,12 @@ public class Main {
         student1.dodajOcene(5.0f);
         student1.dodajOcene(3.0f);
         student1.dodajOcene(4.5f);
+        student1.dodajOcene(5.0f);
+        student1.dodajOcene(5.0f);
 
         float sredniaStudenta1 = student1.wyliczSredniaOcen();
         System.out.println("Srednia ocen Studenta1 " + sredniaStudenta1);
+        student1.czyDostanieStypendium();
+
     }
 }
