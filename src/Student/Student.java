@@ -4,14 +4,59 @@ import java.util.ArrayList;
 
 public class Student {
     //parametry klasy
-    final int id;
-    String name;
-    String surname;
-    int phoneNumber;
-    String email;
-    boolean czyZdane;
-    ArrayList<String> przedmioty = new ArrayList<>();
-    ArrayList<Float> oceny = new ArrayList<>();
+    private final int id;
+    private String name;
+    private String surname;
+    private int phoneNumber;
+    private String email;
+    private boolean czyZdane;
+    private ArrayList<String> przedmioty = new ArrayList<>();
+    private ArrayList<Float> oceny = new ArrayList<>();
+
+    //Gettery i Settery
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public int getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(int phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public boolean isCzyZdane() {
+        return czyZdane;
+    }
+
+    public ArrayList<String> getPrzedmioty() {
+        return przedmioty;
+    }
+
+    public ArrayList<Float> getOceny() {
+        return oceny;
+    }
+
+    public int getId() {
+        return id;
+    }
 
     //konstruktor 1
     public Student(int id, String name, String surname, int phoneNumber) {
@@ -58,8 +103,6 @@ public class Student {
         return sredniaOcen;
     }
 
-    /*zostawić pusty argument, ponieważ dostęp do średniej ocen mam w metodzie wyliczSredniaOcen, która
-    metodą tej klasy */
     public void czyDostanieStypendium() {
         float sredniaOcen = this.wyliczSredniaOcen();
         if (sredniaOcen >= 4.5) {
